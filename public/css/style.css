@@ -267,7 +267,12 @@ a:before, a:after {
 }
 
 
-
+ul.no-bullets {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: center;
+}
 
 
 /* ==========================================================================

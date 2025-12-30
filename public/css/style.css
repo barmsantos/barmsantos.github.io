@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     line-height: 28px;
     margin-bottom: 25px;
-font-size: 17px;
+    font-size: 17px;
     color:#333;
 }
 
@@ -268,10 +268,10 @@ a:before, a:after {
 
 
 ul.no-bullets {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-  text-align: center;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: center;
 }
 
 
@@ -359,10 +359,10 @@ Wrap Sections
 }
 
 footer {
-  text-align: center;
-  padding: 2px;
-  background-color: white;
-  color: black;
+    text-align: center;
+    padding: 2px;
+    background-color: white;
+    color: black;
 }
 
 #span {
@@ -867,4 +867,44 @@ MEDIA QUERIES
         font-size: 25px;
         line-height: 30px;
     }
+}
+
+
+/* ==========================================================================
+Cool Gallery
+========================================================================== */
+#coolGallery { 
+  display: flex !important;
+  overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  padding: 20px !important;
+  width: 100% !important;
+  white-space: nowrap !important;
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* HIDE SCROLLBAR (Chrome/Safari/Edge) */
+#coolGallery::-webkit-scrollbar {
+  display: none;
+}
+
+#coolGallery a { 
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  margin-right: 20px;
+}
+
+#coolGallery img { 
+  width: 250px !important;
+  height: 250px !important;
+  object-fit: cover;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: block;
+}
+
+#coolGallery img:hover {
+  transform: scale(1.05);
 }

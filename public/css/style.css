@@ -278,7 +278,6 @@ ul.no-bullets {
 /* ==========================================================================
 Wrap Sections
 ========================================================================== */
-
 #headerwrap {
     background: url(../imgs/barbara/PLT005_rszd.jpg) no-repeat center top;
     padding-right: 60%;
@@ -297,6 +296,32 @@ Wrap Sections
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+/* iOS SAFARI ONLY - Left title + background shifted left */
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 0) {
+    #headerwrap {
+        background-size: cover !important;               /* Same size */
+        background-position: 60% top !important;         /* SHIFTED LEFT */
+        background-attachment: scroll;
+        padding-left: 5% !important;
+        padding-right: 0 !important;
+        padding-top: 20vh !important;
+        text-align: left !important;
+        min-height: 100vh !important;
+    }
+    
+    #headerwrap h1, 
+    #headerwrap p {
+        text-align: left !important;
+        margin-left: 20px !important;
+        max-width: 80% !important;
+        font-size: 5rem !important;
+    }
+    
+    #headerwrap h1 {
+        margin-bottom: 10px !important;
+    }
 }
 
 #headerwrap h1 {

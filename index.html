@@ -153,7 +153,9 @@
                         src="public/imgs/jpg/jorgeluiscastro.jpg" alt="Jorge Luís Castro"></a>
                 <a href="https://music.apple.com/pt/album/barriga-aos-gritos/1853270878"><img
                         src="public/imgs/jpg/lachado.jpg" alt="Lachado"></a>
-                <a href="https://music.apple.com/us/album/y-digo-no-single/1812088705"><img
+                <a href="https://music.apple.com/us/album/turning-point/1819733013"><img
+                        src="public/imgs/jpg/eurotoire.jpg" alt="Eurotoire"></a>
+                <a href=" https://music.apple.com/us/album/y-digo-no-single/1812088705"><img
                         src="public/imgs/jpg/carolinaalabau.jpg" alt="Carolina Alabau"></a>
                 <a href="https://joaocouto.bandcamp.com/album/efeito-submarino"><img
                         src="public/imgs/jpg/joaocouto2.jpg" alt="João Couto"></a>
@@ -165,6 +167,9 @@
                         src="public/imgs/jpg/joseantonioneves.jpg" alt="José António Neves"></a>
                 <a href="https://abiggermouth.bandcamp.com/album/freedom-pass"><img
                         src="public/imgs/jpg/biggermouth2.jpg" alt="a bigger MOUTH"></a>
+                <a
+                    href="https://music.apple.com/pt/album/call-of-duty-black-ops-7-original-soundtrack/1848341013?l=en-GB"><img
+                        src="public/imgs/jpg/bo7.jpg" alt="Call of Duty Black Ops 7"></a>
             </div>
 
         </div>
@@ -213,7 +218,9 @@
                 <hr>
                 <div class="col-md-3"></div>
                 <div class="col-md-6 centered">
-                    <form class="contact-form" action="contact.php" method="POST">
+                    <form class="contact-form" id="formID" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="d6254b03-0756-47d2-b62e-0f84946b31ec">
+                        <input type="hidden" name="redirect" value="https://whatisbarbaradoing.com/thankyou">
                         <label for="name">Name</label>
                         <input id="name" type="text" name="name" required>
                         <br>
@@ -223,7 +230,10 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" required></textarea>
                         <br>
+                        <div class="h-captcha" data-captcha="true"></div>
+                        <br>
                         <button class="form-send" type="submit">Send</button>
+
                     </form>
                     <hr>
                     <br>
@@ -233,12 +243,11 @@
                 <div class="col-md-3"></div>
             </div>
             <br>
-            <br>
         </div>
 
 
         <footer>
-            <small>Photos by the magnificent chabala Carolina Bravo ♡<br>&copy; Copyright 2025 Bárbara
+            <small>Photos by the magnificent chabala Carolina Bravo ♡<br>&copy; Copyright 2026 Bárbara
                 Santos<br></small>
         </footer>
 
@@ -250,11 +259,32 @@
         <script src="public/lib/php-mail-form/validate.js"></script>
         <script src="public/lib/easing/easing.min.js"></script>
 
-
-
+        <!-- Web3Forms -->
+        <script src="https://web3forms.com/client/script.js" async defer></script>
 
         <!-- Main Javascript File -->
         <script src="public/js/main.js"></script>
+
+        <script>
+            const form = document.getElementById('formID');
+
+            form.addEventListener('submit', function (e) {
+
+                const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+                if (!hCaptcha) {
+                    e.preventDefault();
+                    alert("Please fill out captcha field")
+                    return
+                }
+            });
+        </script>
+
+        <script>
+            window.onload = function () {
+                document.getElementById("form").reset();
+            };
+        </script>
 
 </body>
 

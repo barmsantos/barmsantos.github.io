@@ -261,7 +261,7 @@ blockquote cite:before {
 /* Links */
 
 a {
-    color: #522742;
+    color: #539987;
     word-wrap: break-word;
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
     -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -272,7 +272,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #4A085E;
+    color: #522742;
     text-decoration: none;
     outline: 0;
 }
@@ -294,6 +294,14 @@ ul.no-bullets {
     text-align: center;
 }
 
+#signature {
+    text-align: right;
+    font-style: italic;
+}
+
+#thankyou {
+    width: fit-content;
+}
 
 /* ==========================================================================
 Wrap Sections
@@ -683,13 +691,13 @@ Blog Section
 .contact-form input {
     width: 100%;
     box-sizing: border-box;
-    color: #4A085E;
+    color: #522742;
 }
 
 .contact-form textarea {
     width: 100%;
     box-sizing: border-box;
-    color: #4A085E;
+    color: #522742;
 }
 
 .contact-form .form-send {
@@ -715,12 +723,15 @@ input[type="submit"],
     font-weight: 600;
     text-align: center;
     cursor: pointer;
-    -webkit-appearance: none;     /* iOS Safari */
+    -webkit-appearance: none;
+    /* iOS Safari */
     appearance: none;
 }
 
 
-
+#back-link:hover {
+    text-decoration: underline;
+}
 
 
 /* Copyrights */
